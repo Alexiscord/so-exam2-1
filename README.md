@@ -127,10 +127,10 @@ Luego, con los siguientes comandos, nos aseguramos que una vez cerrado un proces
 De esta manera interactuan las herramientas CPUQuota y CPUShares.
 
 6. Mientras CPUQuota asigna un límite al uso de la CPU, el valor de CPUShares habla de la reserva de recursos que se le asigna a una servicio (usuario, proceso, etc). Es por eso que un servicio cuyo CPUQuota haya sido establecido en el 40% no podrá usar más de esos recursos de CPU aun cuando haya más de este disponible. Por el contrario CPUShares puede utilizar los recursos liberados por otro servicio al cerrarse siempre y cuando la configuración lo permita así como en el caso anterior que le asignamos por CPUShares ciertos porcentajes a los procesos y por CPUQuota les asignamos un 100%.  
- a. Si nuestras necesidades sobre algún servicio implica restricción de recursos, usaremos CPUQuota.
- b. Si nuestras necesidades sobre algún servicio implica reserva de recursos, usaremos CPUShares.
- c. Si nuestras necesidades sobre algún servicio implican restricción y reserva de recursos pordemos combinarlas. Este último caso nos permite limitar y distribuir de mejor manera los recursos para nuestros servicios.
-
+ a. Si nuestras necesidades sobre algún servicio implica restricción de recursos, usaremos CPUQuota.  
+ b. Si nuestras necesidades sobre algún servicio implica reserva de recursos, usaremos CPUShares.  
+ c. Si nuestras necesidades sobre algún servicio implican restricción y reserva de recursos pordemos combinarlas. Este último caso nos permite limitar y distribuir de mejor manera los recursos para nuestros servicios.  
+ 
 ### Referencias
 https://docs.docker.com/engine/admin/resource_constraints/#configure-the-realtime-scheduler
 https://www.freedesktop.org/software/systemd/man/systemd.resource-control.html
