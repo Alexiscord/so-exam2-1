@@ -4,6 +4,7 @@
 **Nombre:** Alexis Córdoba.  
 **Código:** A00232548.  
 **Correo:** alexiscord1@gmail.com  
+**GitURL:** https://github.com/Alexiscord/so-exam2-1  
 
 ### Descripción
 En este documento se muestra en una serie de pasos, la manera en que se crean servicios a partir de Scripts y la manera de controlar algunos recursos de la CPU gracias a CPUQuote y CPUShares. Esto, ayudando a la creación y entendimiento del concepto de asignación de recursos.
@@ -116,9 +117,10 @@ Cuando este valor no se ha cambiado, tiene por defecto el siguiente:
 ![CPUSharesInicial](images/9_sharesantes.png)  
 
 Luego, con los siguientes comandos, nos aseguramos que una vez cerrado un proceso, el otro puede acceder tranquilamente a los recursos liberados:  
-
+```
 # systemctl set-property countDos.service CPUQuota=100%
 # systemctl set-property countTres.service CPUQuota=100%
+```  
 
 ![CPUQuota100%](images/10_quotes100.png)  
 
